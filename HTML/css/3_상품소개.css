@@ -1,0 +1,39 @@
+#container{
+  width: 600px;
+  margin: 0 auto;
+  border: 1px solid gray;
+  text-align: center; /* #chack을 따로 만들어서 거기에 넣어도 된다 */
+}
+
+img{
+  width: 100%;
+}
+
+h1{
+  background-color: black;
+  color: #fff;
+  padding: 5px;
+  text-align: left;
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0;
+}
+
+h2{
+  color: red;
+  font-size: 1.5em;
+}
+
+p{
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 2em;
+}
+
+.accent{
+  color: blue;
+}
+
+.smalltext{
+  font-size: 0.7em;
+}

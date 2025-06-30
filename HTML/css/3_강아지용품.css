@@ -1,0 +1,110 @@
+header{
+  /* background-color: pink; */
+  overflow: hidden;
+  padding: 10px;
+  background: linear-gradient(45deg,#00f,#fff 40%,rgb(116, 28, 47) 80%,white);
+}
+
+header > img{
+  width: 120px;
+  float: left;
+}
+
+nav{
+  float: right;
+  width: 600px;
+}
+
+li{
+  list-style: none;
+  float: left;
+  padding: 10px;
+  margin-right: 40px;
+  color: white;
+  margin-top: 22px;
+}
+
+#container{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+h1{
+  padding-left: 25px;
+  background:url(../img/레드향.jpg) no-repeat center left;
+  background-size: 20px 20px;
+}
+
+.bg{
+  background:url(../img/레드향.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.gradiant{
+  /* background: radial-gradient(circle closest-side at 30% 50%,rgb(240, 240, 170),rgb(183, 236, 183),rgb(228, 174, 228)); */
+  background: repeating-radial-gradient(circle closest-side at 50% 50%,rgb(240, 240, 170),rgb(183, 236, 183),rgb(228, 174, 228) 20%);
+}
+
+article p{
+  text-align: justify;
+}
+
+aside img{
+  width: 120px;
+}
+
+nav a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+section{
+  width: 800px;
+  float: left;
+}
+
+article{
+  border: 1px solid black;
+  width: 368px;
+  height: 250px;
+  padding: 10px;
+  margin: 5px;
+  float: left;
+}
+
+aside{
+  width: 180px;
+  float: right;
+  margin-top: 80.2px;
+}
+
+aside img{
+  width: 100%;
+  height: 181px;
+}
+
+footer{
+  text-align: center;
+  clear: both;
+  /* background-color: rgb(9, 9, 87); */
+  color: white;
+  padding: 10px;
+  background: repeating-linear-gradient(90deg,blue,blue 5%,purple 5%,purple 10%);
+}
+
+footer p{
+  margin-top: 0;
+}
+
+/* h1::after{
+  content: "긴급🪔";
+  background: red;
+  color: white;
+  font-size: 16px;
+  position: relative;
+  top: -15px;
+  border-radius: 5px;
+  padding: 2px;
+  margin: 5px;
+} */

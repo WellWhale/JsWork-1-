@@ -1,0 +1,40 @@
+.container{
+  width: 600px;
+  margin: 0 auto;
+  line-height: 2.5em;
+}
+
+button{
+  cursor: pointer;
+}
+
+fieldset{
+  border: 2px solid gray;
+}
+
+input{
+  width: 120px;
+}
+
+select{
+  width: 128px;
+}
+
+legend{
+  font-size: large;
+  font-weight: bold;
+  color: rgb(0, 156, 104);
+}
+
+label{
+  float: left;
+  width: 110px;
+}
+
+li{
+  list-style-type: none;
+}
+
+.but{
+  text-align: center;
+}

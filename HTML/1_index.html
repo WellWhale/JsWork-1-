@@ -1,0 +1,218 @@
+<!doctype html> <!--HTML 작성하겠다, 문서 유형에 대한 "선언"-->
+
+<html lang="ko">  <!--이것은 한국어로 만들어졌다는 정보 제공, 무조건 들어가야됨-->
+
+    <head> <!--이곳의 정보-->
+      <meta charset="utf-8"> <!--유니코드를 쓰겠다 // 요새는 자동으로 잡히는데 원칙적으론 함-->
+      <title>첫 페이지</title> <!--탭에 나올 제목-->
+      <style>
+        body{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        header{
+            width: 100%;
+            background-color: #ccc;
+        }
+        main{
+            width: 80%;
+            float: left;
+            background-color: rgb(170, 113, 43, 0.5);
+            padding: 10px;
+        }
+        aside{
+            background-color: aqua;
+            width: 18%;
+            float: right;
+        }
+        footer{
+            background-color: brown;
+            clear: both;
+            padding: 10px;
+        }
+        table {
+            border: 1px solid gray;
+            border-collapse: collapse; /* 테두리 합치기 */
+        }
+        th, td {
+            border: 1px solid gray;
+        }
+        thead {
+            background-color: beige;
+        }
+        nav{
+            background-color: coral;
+            padding: 10px;
+        }
+        tbody {
+            /* background-color: rgb(158, 158, 42); */
+            text-align: center; /* 가운데 정렬 */
+        }
+        tfoot {
+            background-color: bisque;
+        }
+      </style>
+    </head>
+
+    <body> <!--웹에 표시되는 내용-->
+      <header>
+          <h1>html 구조</h1>
+
+          <h3>header : <span style="color: red;">문서의</span> 맨 위 영역</h3>
+
+          <p><b>헤더 영역</b>에는 <strong>웹 페이지의 로고나 검색창을 배치</strong>합니다<br>
+             메뉴를 포함할때도 있습니다
+          </p>
+          <nav>
+            <h3>nav : 메뉴영역 입니다</h3>
+    
+            <p>웹 페이지에서 보여줄 내용을 항목별로 구성해놓은 영역입니다</p>
+          </nav>
+      </header>
+
+          <main>
+            <h3>main : 웹 페이지 중심 내용을 넣습니다<br></h3>
+
+            <p><em>웹 페이지에 <b>한번만</b> 쓸 수 있는 태그</em>입니다</p>
+
+            <section>
+                <h4>section : 주제별로 본문을 편집하는 영역입니다</h4>
+
+                <h5><abbr title="엉덩이를 뜨겁게">엉뜨</abbr></h5> <!--"툴팁"을 넣는게 title-->
+                <h5>y=x<sup>2</sup></h5>
+                <h5>H<sub>2</sub>O</h5>
+
+                <p>반드시 주제를 나타내는 제목 태그가 있어야 합니다</p>
+                <p>Lorem, ipsum<br> dolor sit amet consectetur
+                    adipisicing elit. Tenetur laboriosam omnis
+                    <blockquote>
+                        <i>, id nesciunt enim unde, voluptate sequi
+                        fuga est adipisci alias laudantium provident</i><br>
+                        <cite> - 네이버 블로그에서 인용 - </cite>
+                    </blockquote>
+                        voluptas deserunt optio eaque quasi? Dicta.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, deserunt.</p>
+            </section>
+
+            <section>
+                <h3>목록 만들기</h3>
+
+                <h4>순서 <q>있는</q> 목록 만들기</h4>
+                <p>코끼리 냉장고에 넣기</p>
+                <ol type="I" start="3">
+                    <li>코끼리를 잡는다</li>
+                    <li>냉장고를 산다</li>
+                    <li>냉장고 문을 연다</li>
+                    <li>코끼리를 넣는다</li>
+                    <li>냉장고 문을 닫는다</li>
+                </ol>
+
+                <h4>순서 <q>없는</q> 목록 만들기</h4>
+                <p>여행 준비물</p>
+                <ul>
+                    <li>여권</li>
+                    <li>세면도구</li>
+                    <li>보조베터리</li>
+                    <li>결제카드</li>
+                    <li>수영복</li>
+                </ul>
+
+                <h4>설명 목록 만들기</h4>
+                <p>웹 개발자 기초 과목</p>
+                <dl>
+                    <dt>html</dt>
+                    <dd>웹 문서의 구조를 만듦</dd>
+                    <br>
+                    <dt>css</dt>
+                    <dd>웹 문서의 디자인 담당</dd>
+                    <br>
+                    <dt>java script</dt>
+                    <dd>사용자의 상호작용을 처리</dd>
+                    <dd>동적 사이트를 제작</dd>
+                </dl>
+            </section>
+
+            <section>
+                <h3>표 만들기</h3>
+
+                <!-- low와 colgrop중에 우선순위는 low-->
+
+                <table>
+                    <caption>선물용과 가정용 상품 구성</caption> <!-- 표 제목 -->
+                    <colgroup>
+                        <col style="background-color: aquamarine;">
+                        <col>
+                        <col span="2" style="background-color: blueviolet;"> <!-- 두 열을 묶어서 색 처리 -->
+                        <!-- <col> -->
+                    </colgroup>
+                    <thead>
+                        <tr> <!-- 행 -->
+                            <th>용도</th> <!-- 열 -->
+                            <th>중량</th>
+                            <th colspan="2">개수, 가격</th> <!-- 열 합치기 -->
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">선물용</td> <!-- 행 합치기 -->
+                            <td>3kg</td>
+                            <td>11~16과</td>
+                            <td>35,000원</td>
+                        </tr>
+                        <tr>
+                            <td>5kg</td>
+                            <td>18~26과</td>
+                            <td>52,000원</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">가정용</td>
+                            <td>3kg</td>
+                            <td>11~16과</td>
+                            <td>30,000원</td>
+                        </tr>
+                        <tr>
+                            <td>5kg</td>
+                            <td>18~26과</td>
+                            <td>47,000원</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <td colspan="4">* 제품 구매 시기에 따라 가격이 변동 될 수 있습니다</td>
+                    </tfoot>
+                </table>
+            </section>
+
+            <article>
+                <h3>article : 독립 된 기사 편집 영역입니다</h3>
+
+                <p>섹션과의 차이는 독립된 내용인 경우에 사용합니다</p>
+
+                <pre><mark><q>Lorem ipsum</q></mark> dolor sit amet consectetur adipisicing elit.
+                    Accusantium        nostrum, impedit sapiente rem incidunt obcaecati,
+                    necessitatibus consequatur officia repellendus ratione
+                    cumque iure consectetur at
+                    cupiditate placeat? Consequatur, iste et! Nisi!</pre>>
+            </article>
+
+            <div>
+                <ruby>學習<rt>학습</rt></ruby>
+            </div>
+
+          </main>
+
+          <aside>
+            <h3>aside : 주 내용과 상관 없는 광고영역입니다</h3>
+
+            <p>로그인폼 이나 광고 사이트 연결</p>
+          </aside>
+
+          <footer>
+            <h3>footer 영역</h3>
+
+            <p>개인정보 보호방침, 사이트주소, sns정보 등..</p>
+          </footer>
+    </body>
+
+</html>

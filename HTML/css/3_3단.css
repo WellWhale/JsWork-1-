@@ -1,0 +1,45 @@
+#container{
+  border: 1px solid black;
+  width: 960px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+header{
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.leftaside{
+  border: 1px solid black;
+  width: 220px;
+  padding: 20px;
+  background-color: antiquewhite;
+  margin-bottom: 20px;
+  float: left;
+}
+
+main{
+  border: 1px solid black;
+  width: 384px;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  float: left;
+}
+
+.rightaside{
+  border: 1px solid black;
+  width: 220px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: antiquewhite;
+  float: right;
+}
+
+footer{
+  border: 1px solid black;
+  padding: 10px;
+  clear: both;
+}

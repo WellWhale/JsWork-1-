@@ -1,0 +1,28 @@
+.container{
+  width: 540px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid black;
+  line-height: 2em;
+}
+
+fieldset{
+  border: none;
+}
+
+.gg label{
+  width: 100px;
+  float: left;
+}
+
+.gg > li{
+  display: inline-block;
+}
+
+li{
+  list-style-type: none;
+}
+
+.but{
+  text-align: center;
+}

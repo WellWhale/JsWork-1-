@@ -1,0 +1,75 @@
+.container{
+  width: 800px;
+  margin: 0 auto;
+}
+
+header{
+  background-color: rgb(241, 114, 135);
+  color: white;
+  overflow: hidden;
+  padding: 20px;
+}
+
+header h1{
+  display: inline-block;
+}
+
+nav{
+  float: right;
+}
+
+nav li{
+  list-style-type: none;
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.section{
+  padding: 20px;
+  border: 5px solid rgb(206, 206, 206);
+}
+
+.one{
+  float: left;
+  padding: 20px;
+  width: 206px;
+  height: 385px;
+}
+
+.two{
+  float: left;
+  padding: 20px;
+  width: 206px;
+  height: 385px;
+  margin-left: 5px;
+}
+
+.three{
+ float: left;
+ padding: 20px;
+ width: 206px;
+ height: 385px;
+ margin-left: 5px;
+}
+
+img{
+  float: right;
+  width: 180px;
+}
+
+
+
+footer{
+  background-color: rgb(5, 139, 139);
+  padding: 15px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}

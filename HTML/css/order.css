@@ -1,0 +1,32 @@
+.container{
+  width: 600px;
+  margin: 0 auto;
+  border: 1px solid rgb(128, 128, 128, 0.5);
+  padding: 10px;
+}
+
+h1{
+  margin-top: 0;
+}
+
+legend{
+  color: rgb(175, 119, 228);
+  font-weight: bold;
+  font-size: larger;
+}
+
+.cla-a label{
+  float: left;
+  width: 100px;
+  font-weight: bold;
+}
+
+li{
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.but{
+  border: none;
+  text-align: center;
+}

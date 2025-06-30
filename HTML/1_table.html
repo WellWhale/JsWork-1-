@@ -1,0 +1,227 @@
+<!doctype html>
+
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+
+    <title>표</title>
+
+    <style>
+        table {
+            text-align: center; /* 가운데 정렬 */
+            width: 60%;
+        }
+        th, td {
+            border: 1px solid black;
+        }
+        th {
+            background-color: pink;
+        }
+        tfoot {
+            background-color: gray;
+        }
+        col.room-name {
+            background-color: red;
+        }
+        div p{
+          width: 500px;
+          height: 60px;
+          background-color: aqua;
+          text-align: center;
+          line-height: 60px;
+        }
+        .shadow{
+          box-sizing: border-box;
+          border: 1px solid #ccc;
+          width: 200px;
+          height: 200px;
+          text-align: center;
+          line-height: 200px;
+          /* box-shadow: 0px 0px 10px 5px black; */
+          box-shadow: 0px 0px 10px 5px black inset;
+          padding: 10px;
+          border-top-left-radius: 30%;
+          border-top-right-radius: 30%;
+        }
+        nav{
+          background-color: black;
+          padding: 10px;
+          /* height: 50px; */
+          overflow: hidden;
+        }
+        nav img{
+          width: 80px;
+          height: 80px;
+          float: left;
+        }
+        nav ul{
+          float: right;
+          margin: 0;
+          padding: 0;
+          margin-top: 8.8px;
+        }
+        nav li{
+          color: white;
+          float: left;
+          list-style: none;
+          /* border: 1px solid #fff; */
+          padding: 10px;
+          margin: 10px;
+        }
+        nav li:hover{
+          background-color: rgb(36, 36, 36);
+        }
+        #box1{
+          width: 100px;
+          height: 80px;
+          background-color: aquamarine;
+          text-align: center;
+          line-height: 80px;
+          position: relative;
+          top: -100px;
+          left: 100px;
+        }
+        #box2{
+          width: 300px;
+          height: 300px;
+          background-color: beige;
+          text-align: center;
+          position: relative;
+        }
+        #box2 div{
+          width: 50px;
+          height: 50px;
+          /* background-color: blue; */
+          position: absolute;
+        }
+        #b1{
+          top: 0px;
+          left: 0px;
+        }
+        #b2{
+          top: 0;
+          right: 0;
+        }
+        #b3{
+          bottom: 0;
+          left: 0;
+        }
+        #b4{
+          bottom: 0;
+          right: 0;
+        }
+        #b5{
+          top: 125px;
+          left: 125px;
+          z-index: 999;
+          /* '부모크기에서 자식크기를 빼면' 남는공간이 나옴, 그걸 '반으로 나눠서' 양쪽으로 나누면 가운데가 됨 */
+        }
+        #b6{
+          background-color: blueviolet;
+          top: 120px;
+          left: 130px;
+          z-index: 1000;
+        }
+        #b7{
+          background-color: brown;
+          top: 130px;
+          left: 120px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <p>세로정렬</p>
+    </div>
+
+    <nav>
+      <img src="img/레드향.jpg" alt="레드향">
+      <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+      </ul>
+    </nav>
+
+    <table>
+      <caption>파라다이스 객실</caption>
+
+      <!-- ✅ 여기 colgroup으로 1열(방이름 열)에 스타일 지정 -->
+        <colgroup>
+            <col class="room-name">  <!-- 1열: 방이름 -->
+            <col> <!-- 2열: 대상 -->
+            <col> <!-- 3열: 크기 -->
+            <col> <!-- 4열: 가격 -->
+        </colgroup>
+
+      <thead>
+        <tr>
+          <th>방이름</th>
+          <th>대상</th>
+          <th>크기</th>
+          <th>가격</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>핑크방</td>
+          <td>여성</td>
+          <td rowspan="3">4인실</td>
+          <td rowspan="4">1인 20,000원</td>
+        </tr>
+        <tr>
+          <td rowspan="2">보라방</td>
+          <td>동성</td>
+        </tr>
+        <tr>
+          <td>가족1팀</td>
+        </tr>
+        <tr>
+          <td>그린방</td>
+          <td>-</td>
+          <td>2인실</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="4">바깥채 전체를 렌트합니다</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <p class="shadow">박스그림자</p>
+
+    <div id="box1">
+      박스1
+    </div>
+
+    <div id="box2">
+      박스2
+      <div id="b1">
+        자식1
+      </div>
+      <div id="b2">
+        자식2
+      </div>
+      <div id="b3">
+        자식3
+      </div>
+      <div id="b4">
+        자식4
+      </div>
+      <div id="b5">
+        자식5
+      </div>
+      <div id="b6">
+        자식6
+      </div>
+      <div id="b7">
+        자식7
+      </div>
+    </div>
+  </body>
+</html>

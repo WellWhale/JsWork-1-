@@ -1,0 +1,33 @@
+.container{
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+form li{
+  list-style-type: none;
+  margin: 5px;
+  overflow: hidden;
+}
+
+form label{
+  width: 100px;
+  /* display: inline-block; */
+  float: left;
+}
+
+/* .label-width label{
+  float: none;
+  display: inline-block;
+} */
+
+.redaccent{
+  color: red;
+  font-weight: bold;
+}
+
+input:checked + span{
+  color: blue;
+  font-weight: bold;
+}
