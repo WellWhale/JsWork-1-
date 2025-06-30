@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let com;
+    let me;
+
+    com = Math.floor(Math.random() * 10) + 1;
+    // 1부터 10까지 임의의 숫자를 생성한다
+    
+    // while(true) {
+      me = prompt("숫자를 입력하세요", 0);
+
+      if(com > me) {
+        alert("작다")
+      } else if(me > com) {
+        alert("크다")
+      } else {
+        alert("같다")
+        // break
+      }
+    // }
+
+  </script>
+
+</body>
+
+</html>

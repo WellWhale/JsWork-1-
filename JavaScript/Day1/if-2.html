@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 홀짝 게임
+
+    let com;
+    let me;
+    // 0, 1 난수 생성 (0:짝 | 1:홀)
+    com = Math.floor(Math.random() * 2);
+    me = prompt("1:홀 이나 0:짝 을 입력하세요.");
+    // 0, 1 중에 입력 (prompt)
+
+    if(me == com) {
+      alert("정답")
+    } else {
+      alert("오답")
+    }
+
+    // 정답 출력 (if)
+  </script>
+
+</body>
+
+</html>
