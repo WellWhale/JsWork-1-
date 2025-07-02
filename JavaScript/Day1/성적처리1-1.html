@@ -5,47 +5,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <style>
+    table {
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+  </style>
 </head>
 
 <body>
   <script>
     // 성적처리 함수 선언
-
     // 필드명 출력
     // 성적자료 넘김(함수 호출)
 
+    // 이름, 총점, 평균, 등급 <- 출력
     function sungjuk(name, kor, eng, met) {
-      // 이름, 총점, 평균, 등급 <- 출력
-      var hap = kor + eng + met
-      var pyu = Math.round(hap / 3)
+      var hap = kor + eng + met;
+      var pyu = Math.round(hap / 3);
       var len;
 
-      if (100 >= pyu) {
-        len = "A등급"
+      if (pyu >= 90) {
+        len = 'A등급';
+      } else if (pyu >= 80) {
+        len = 'B등급';
       } else {
-        len = "B등급"
+        len = '부모님면담';
       }
 
-      return `${name} ${hap} ${pyu} ${len}`
-      // console.log(`${name} ${hap} ${pyu} ${len}`)
+      return `<tr><td>${name}</td><td>${hap}</td><td>${pyu}</td><td>${len}</td></tr>`;
     }
 
+    document.write("<table><tr><th>이름</th><th>총점</th><th>평균</th><th>등급</th></tr>");
+    document.write(sungjuk('aaa', 80, 75, 90));
+    document.write(sungjuk('bbb', 90, 88, 99));
+    document.write(sungjuk('ccc', 100, 85, 94) + "</table>");
 
-    document.write(`<table>
-      <tr>
-        <th>이름</th>
-        <th>총점</th>
-        <th>평균</th>
-        <th>등급</th>
-      </tr>`);
-    document.write(`
-      <tr>
-        <td>${name}</td>
-        <td>${hap}</td>
-        <td>${pyu}</td>
-        <td>${len}</td>
-      </tr>`)
-    console.log(sungjuk('ccc', 100, 85, 94));
     // sungjuk('aaa', 80, 75, 90);
     // sungjuk('bbb', 90, 88, 99);
     // sungjuk('ccc', 100, 85, 94);

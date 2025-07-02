@@ -20,17 +20,18 @@
       var pyu = Math.round(hap / 3)
       var len;
 
-      if (100 >= pyu) {
-        len = "A등급"
-      } else {
-        len = "B등급"
+      switch (Math.floor(pyu / 10)) {
+        case 10:
+        case 9: len = 'A등급'
+          break;
+        case 8: len = 'B등급'
+          break;
+        default: len = '부모님면담'
       }
       
       return `${name} ${hap} ${pyu} ${len}`
       // console.log(`${name} ${hap} ${pyu} ${len}`)
     }
-
-
 
     console.log(sungjuk('aaa', 80, 75, 90));
     console.log(sungjuk('bbb', 90, 88, 99));
