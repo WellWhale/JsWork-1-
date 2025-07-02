@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반복문</title>
+
+  <!-- <style>
+    td{
+      border: 1px solid black;
+      background-color: cadetblue;
+      padding: 10px;
+    }
+  </style> -->
+</head>
+
+<body>
+  <h1>반복문</h1>
+
+  <script>
+    // 별 찍기
+
+    // for(let i = 1; i <= 5; i++){
+    //   let stars = "";
+    //   for(let j = 1; j <= i; j++){
+    //     stars += "*";
+    //   }
+    //   console.log(stars)
+    // }
+
+
+
+
+
+
+    // // 별 찍기 2
+
+    // for(let i = 1; i <= 5; i++){
+    //   let stars = "";
+    //   for(let j = 1; j <= 5-i; j++){
+    //     stars += " "; //공백
+    //   }
+    //   for(let k = 1; k <= i; k++){
+    //     stars += "k";
+    //   }
+    //   console.log(stars)
+    // }
+
+
+
+
+
+
+    // 자리 배치도
+    // 사람 수, 한 줄 사람 수, 몇 줄을 할건지, 의자 번호, 배치도
+    // personNum, colNum, rowNom, seatNum, layout
+
+    let personNum = prompt("관객 수를 입력하세요", 0);
+    let colNum = prompt("한줄에 앉을 관객수를 입력하세요.", 0);
+    let rowNum = parseInt(personNum / colNum);
+    // rowNum = personNum % colNum == 0 ? rowNum : ++rowNum;
+    if (personNum % colNum != 0) {
+      rowNum++;
+    }
+    let seatNum = 0; // 좌석 번호를 출력하기 위한 자료형
+    let layout = "<table><caption>자리배치도</caption>"; // 출력을 위한 자료형
+
+    for (let i = 1; i <= rowNum; i++) {
+      layout += "<tr>";
+      for (let j = 1; j <= colNum; j++) {
+        seatNum++;
+        layout += `<td>좌석 ${seatNum}</td>`;
+        if (personNum <= seatNum) {
+          break;
+        }
+      }
+      layout += "</tr>";
+    }
+    layout += "</table>";
+    document.write(layout)
+
+
+
+
+
+
+    // min에서 max까지 홀수의 합과 짝수의 합을 구하기
+    let min = prompt("min의 수 입력", 0);
+    let max = prompt("max의 수 입력", 0);
+    let holNum = 0, jjaNum = 0;
+
+    for (; min <= max; min++) {
+      if (min % 2 == 0) {
+        jjaNum++
+      } else {
+        holNum++
+      }
+    }
+    console.log(`홀수의 합 : ${holNum}\n짝수의 합 : ${jjaNum}`)
+
+
+
+
+  </script>
+</body>
+
+</html>
