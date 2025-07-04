@@ -45,9 +45,6 @@ function show() { // 문서에 도서목록 출력(<ul><li>)
   }
 }
 
-
-
-
 // 문서에 도서 목록 삭제
 function remove() {
   let delNum = this.getAttribute('id');

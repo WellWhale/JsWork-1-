@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>구구단</title>
+    
+    <!-- 과제2 : 웹 문서의 입력 상자에 단을 입력하고, 출력 버튼을 클릭하면 해당하는 단을
+    출력하는 프로그램을 작성하세요. -->
 </head>
 
 <body>
@@ -15,19 +18,7 @@
     <div id="result"></div>
 
     <script>
-        let btnOn = document.querySelector('#btn');
-        btnOn.onclick = btnClick;
         
-        function btnClick() {
-            let danLet = document.querySelector('#dan').value;
-            let rusultDiv = document.querySelector('#result');
-            rusultDiv.innerHTML = '';
-
-            for (i = 1; i <= 9; i++) {
-                rusultDiv.innerHTML += `${danLet} x ${i} = ${danLet * i}<br>`
-            }
-        }
-
     </script>
 </body>
 
