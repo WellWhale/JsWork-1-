@@ -10,27 +10,24 @@
 <body>
     <form name="gugudan">
         <label>단 입력 : <input type="text" id="dan"></label>
-        <button type="button" id="btn" onclick="gugudanPrint()">출력</button>
+        <button type="button" id="btn">출력</button>
     </form>
     <div id="result"></div>
 
     <script>
-        // 출력 버튼이 클릭되면 입력된 단만 출력
-        function gugudanPrint() {
-            const danCon = parseInt(document.getElementById("dan").value);
-            const resultDiv = document.getElementById("result");
+        let btnOn = document.querySelector('#btn');
+        btnOn.onclick = btnClick;
+        
+        function btnClick() {
+            let danLet = document.querySelector('#dan').value;
+            let rusultDiv = document.querySelector('#result');
+            rusultDiv.innerHTML = '';
 
-            resultDiv.innerHTML = "";
-
-            if (isNaN(danCon) || danCon < 1 || danCon > 9) {
-                alert(`1부터 9 사이의 숫자를 입력하세요`);
-                return;
-            }
-
-            for (let i = 1; i <= 9; i++) {
-                resultDiv.innerHTML += `${danCon} x ${i} = ${danCon * i}<br>`;
+            for (i = 1; i <= 9; i++) {
+                rusultDiv.innerHTML += `${danLet} x ${i} = ${danLet * i}<br>`
             }
         }
+
     </script>
 </body>
 

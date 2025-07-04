@@ -27,7 +27,6 @@ function pwch() {
   }
 }
 
-
 // 비밀번호가 맞는지 확인
 function pwcompare() {
   if (pw1.value != pwc.value) {

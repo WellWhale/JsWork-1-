@@ -11,6 +11,24 @@
     <h3>배열작업</h3>
 
     <script>
+        let ranNum = [];
+        for (i = 0; i < 10; i++) {
+            ranNum[i] = parseInt(Math.random() *100) +1;
+        }
+
+        let max = 0;
+        let min = 100;
+        let hap = 0;
+
+        for (let ele of ranNum) {
+            hap += ele;
+            
+            if (min > ele) min = ele;
+            if (max < ele) max = ele;
+        }
+
+        console.log(ranNum)
+        console.log(`총합:${hap} 최소값:${min} 최대값:${max}`)
 
 
     </script>

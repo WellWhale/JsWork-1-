@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>좌석배치도</title>
     <style>
-        table{
+        table {
             /* border: 1px solid #ccc; */
             border-collapse: collapse;
             empty-cells: hide;
             margin-top: 30px;
 
         }
-        td{
+
+        td {
             border: 1px solid #ccc;
             padding: 5px;
         }
     </style>
 </head>
+
 <body>
     <h1>좌석배치도</h1>
     <form name="output">
@@ -30,7 +33,32 @@
     <div id="layout"></div>
 
     <script>
-        
+        let btnName = document.querySelector('#btn');
+        btnName.onclick = btnOn;
+
+        function btnOn() {
+            let tableLet = `<table>`;
+            let personNum = document.querySelector('#person').value;
+            let colNumNum = document.querySelector('#colNum').value;
+            let layoutT = document.querySelector('#layout');
+            let rowNum = Math.ceil(personNum / colNumNum);
+            let seatNum = 1;
+
+            for (let i = 1; i <= rowNum; i++) {
+                tableLet += `<tr>`;
+                for (let j = 1; j <= colNumNum; j++, seatNum++) {
+                    tableLet += `<td>좌석 ${seatNum}</td>`;
+                    if (personNum <= seatNum) {
+                        break;
+                    }
+                }
+                tableLet += `</tr>`;
+            }
+            tableLet += `</table>`;
+            layoutT.innerHTML = tableLet;
+        }
+
     </script>
 </body>
+
 </html>
